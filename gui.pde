@@ -132,9 +132,9 @@ public void m_click1(GButton source, GEvent event) { //_CODE_:m:831098:
   println("m - GButton >> GEvent." + event + " @ " + millis());
 } //_CODE_:m:831098:
 
-public void knob1_turn1(GKnob source, GEvent event) { //_CODE_:knob1:682873:
-  println("knob1 - GKnob >> GEvent." + event + " @ " + millis());
-} //_CODE_:knob1:682873:
+public void display_change(GSlider2D source, GEvent event) { //_CODE_:display:748887:
+  println("display - GSlider2D >> GEvent." + event + " @ " + millis());
+} //_CODE_:display:748887:
 
 
 
@@ -262,18 +262,13 @@ public void createGUI(){
   m.setText("M");
   m.setTextBold();
   m.addEventHandler(this, "m_click1");
-  knob1 = new GKnob(this, 370, 370, 60, 60, 0.8);
-  knob1.setTurnRange(110, 70);
-  knob1.setTurnMode(GKnob.CTRL_HORIZONTAL);
-  knob1.setSensitivity(1);
-  knob1.setShowArcOnly(false);
-  knob1.setOverArcOnly(false);
-  knob1.setIncludeOverBezel(false);
-  knob1.setShowTrack(true);
-  knob1.setLimits(0.5, 0.0, 1.0);
-  knob1.setShowTicks(true);
-  knob1.setOpaque(false);
-  knob1.addEventHandler(this, "knob1_turn1");
+  display = new GSlider2D(this, 0, 0, 800, 600);
+  display.setLimitsX(0.5, 0.0, 1.0);
+  display.setLimitsY(0.5, 0.0, 1.0);
+  display.setNumberFormat(G4P.DECIMAL, 2);
+  display.setLocalColorScheme(GCScheme.GREEN_SCHEME);
+  display.setOpaque(true);
+  display.addEventHandler(this, "display_change");
 }
 
 // Variable declarations 
@@ -306,5 +301,5 @@ GButton v;
 GButton b; 
 GButton n; 
 GButton m; 
-GKnob knob1; 
+GSlider2D display; 
 
