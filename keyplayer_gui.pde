@@ -12,11 +12,19 @@ public void setup(){
 public void draw(){
   //adding GUI graphics
   background(100);
+  noStroke();
   //draw gradient for display
-  rect(0, 600, 800, 2);
+  for (int i = 0; i < 10; i++)
+  {
+    int fivei = i * 5 + 50;
+    fill(fivei);
+    rect(0, 600 + i, width, 1);
+  }
+  
   
   int notes_width = 164;
-  for (int i = 0; i * notes_width < width; i++) {
+  for (int i = 0; i * notes_width < width; i++) 
+  {
     int x = notes_width * i;
     fill(0);
      if ( (x + 45) < width ) { //check if the whole note fits on the page
@@ -31,7 +39,8 @@ public void draw(){
       //slanted note
       //triangle: (x1, y1, x2, y2, x3, y3)
       ellipse(62 + x, 790, 10, 10);
-      triangle(60 + x, 760, 65 + x, 790, 62 + x, 760);
+      triangle(60 + x, 760, 64 + x, 790, 63 + x, 760);
+      triangle(64 + x, 790, 67 + x, 790, 63 + x, 760);
       triangle(62 + x, 760, 67 + x, 790, 62 + x, 760);
       triangle(62 + x, 760, 71 + x, 760, 62 + x, 764);
     }
