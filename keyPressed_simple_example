@@ -1,0 +1,22 @@
+// Click on the image to give it focus,
+// and then press any key.
+
+int r = 0;
+int g = 0;
+int b = 0;
+
+void draw() {
+  fill(r,g,b);
+  rect(25, 25, 50, 50);
+}
+
+void keyPressed() {
+    if(int(key) >= 100){
+      key += 120;
+    }
+    r = int(random(key));
+    g = int(random(key));
+    b = int(random(key));
+    print(int(key) + " ");
+  }
+ 
