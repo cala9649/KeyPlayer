@@ -16,11 +16,11 @@ void setup() {
   if (frame != null) {
     frame.setResizable(true);
   }
-  numRows = h/4; 
-  numCols = w/12;
+  numRows = h/3; 
+  numCols = w/8;
 }
 
-void keyPressed() { 
+void keyPressed() {
    if(int(key) == 65535) { key = 255; }
    pressed[key] = true;
    
@@ -33,6 +33,8 @@ void keyPressed() {
     else {
       keyVal = 255;
     }
+    
+    if(int(key) == 32) { keyVal = 200; }
    
     r = int(random(keyVal));
     g = int(random(keyVal));
@@ -45,61 +47,42 @@ void keyPressed() {
       for (int y = 0; y <= h; y += numRows) {
         if(keyVal >= 200) { fill(random(r),g,b); }
         else if(keyVal > 100 && keyVal < 200) { fill(r, random(g), b); }
-        else { fill(r,g,random(b)); }
+        else { fill(r,g,b); }
         rect(x, y, numCols, numRows); 
       }   
     }
 
     fill(0);
     
-    if(pressed[49]) { rect(0,0, numCols+10, numRows+10, 10); }
-    if(pressed[50]) { rect(numCols-5, 0, numCols+10, numRows+10, 10); }
-    if(pressed[51]) { rect(2*numCols-5, 0, numCols+10, numRows+10, 10); }
-    if(pressed[52]) { rect(3*numCols-5, 0, numCols+10, numRows+10, 10); }
-    if(pressed[53]) { rect(4*numCols-5, 0, numCols+10, numRows+10, 10); }
-    if(pressed[54]) { rect(5*numCols-5, 0, numCols+10, numRows+10, 10); }
-    if(pressed[55]) { rect(6*numCols-5, 0, numCols+10, numRows+10, 10); }
-    if(pressed[56]) { rect(7*numCols-5, 0, numCols+10, numRows+10, 10); }
-    if(pressed[57]) { rect(8*numCols-5, 0, numCols+10, numRows+10, 10); }
-    if(pressed[48]) { rect(9*numCols-5, 0, numCols+10, numRows+10, 10); }
-    if(pressed[45]) { rect(10*numCols-5, 0, numCols+10, numRows+10, 10); }
-    if(pressed[61]) { rect(11*numCols-5, 0, numCols+10, numRows+10, 10); }    
-    if(pressed[113]) { rect(0, numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[119]) { rect(numCols-5, numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[101]) { rect(2*numCols-5, numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[114]) { rect(3*numCols-5, numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[116]) { rect(4*numCols-5, numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[121]) { rect(5*numCols-5, numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[117]) { rect(6*numCols-5, numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[105]) { rect(7*numCols-5, numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[111]) { rect(8*numCols-5, numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[112]) { rect(9*numCols-5, numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[91]) { rect(10*numCols-5, numRows-5, numCols+10, numRows+10, 10); }    
-    if(pressed[93]) { rect(11*numCols-5, numRows-5, numCols+10, numRows+10, 10); }    
-    if(pressed[97]) { rect(0, 2*numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[115]) { rect(numCols-5, 2*numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[100]) { rect(2*numCols-5, 2*numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[102]) { rect(3*numCols-5, 2*numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[103]) { rect(4*numCols-5, 2*numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[104]) { rect(5*numCols-5, 2*numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[106]) { rect(6*numCols-5, 2*numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[107]) { rect(7*numCols-5, 2*numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[108]) { rect(8*numCols-5, 2*numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[59]) { rect(9*numCols-5, 2*numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[39]) { rect(10*numCols-5, 2*numRows-5, numCols+10, numRows+10, 10); }    
-    if(pressed[10]) { rect(11*numCols-5, 2*numRows-5, numCols+10, numRows+10, 10); }   
-    if(pressed[255]) { rect(0, 3*numRows-5, numCols+10, numRows+10, 10);
-                                 rect(11*numCols-5, 3*numRows-5, numCols+10, numRows+10, 10); }    
-    if(pressed[122]) { rect(numCols-5, 3*numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[120]) { rect(2*numCols-5, 3*numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[99]) { rect(3*numCols-5, 3*numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[118]) { rect(4*numCols-5, 3*numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[98]) { rect(5*numCols-5, 3*numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[110]) { rect(6*numCols-5, 3*numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[109]) { rect(7*numCols-5, 3*numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[44]) { rect(8*numCols-5, 3*numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[46]) { rect(9*numCols-5, 3*numRows-5, numCols+10, numRows+10, 10); }
-    if(pressed[47]) { rect(10*numCols-5, 3*numRows-5, numCols+10, numRows+10, 10); }
+    //row q - i
+    if(pressed[113]) { rect(0, 0, numCols+10, numRows+10, 10); }
+    if(pressed[119]) { rect(numCols-5, 0, numCols+10, numRows+10, 10); }
+    if(pressed[101]) { rect(2*numCols-5, 0, numCols+10, numRows+10, 10); }
+    if(pressed[114]) { rect(3*numCols-5, 0, numCols+10, numRows+10, 10); }
+    if(pressed[116]) { rect(4*numCols-5, 0, numCols+10, numRows+10, 10); }
+    if(pressed[121]) { rect(5*numCols-5, 0, numCols+10, numRows+10, 10); }
+    if(pressed[117]) { rect(6*numCols-5, 0, numCols+10, numRows+10, 10); }
+    if(pressed[105]) { rect(7*numCols-5, 0, numCols+10, numRows+10, 10); }
+    
+    //row a - k
+    if(pressed[97]) { rect(0, numRows-5, numCols+10, numRows+10, 10); }
+    if(pressed[115]) { rect(numCols-5, numRows-5, numCols+10, numRows+10, 10); }
+    if(pressed[100]) { rect(2*numCols-5, numRows-5, numCols+10, numRows+10, 10); }
+    if(pressed[102]) { rect(3*numCols-5, numRows-5, numCols+10, numRows+10, 10); }
+    if(pressed[103]) { rect(4*numCols-5, numRows-5, numCols+10, numRows+10, 10); }
+    if(pressed[104]) { rect(5*numCols-5, numRows-5, numCols+10, numRows+10, 10); }
+    if(pressed[106]) { rect(6*numCols-5, numRows-5, numCols+10, numRows+10, 10); }
+    if(pressed[107]) { rect(7*numCols-5, numRows-5, numCols+10, numRows+10, 10); }
+    
+    //row z - , 
+    if(pressed[122]) { rect(0, 2*numRows-5, numCols+10, numRows+10, 10); }
+    if(pressed[120]) { rect(numCols-5, 2*numRows-5, numCols+10, numRows+10, 10); }
+    if(pressed[99]) { rect(2*numCols-5, 2*numRows-5, numCols+10, numRows+10, 10); }
+    if(pressed[118]) { rect(3*numCols-5, 2*numRows-5, numCols+10, numRows+10, 10); }
+    if(pressed[98]) { rect(4*numCols-5, 2*numRows-5, numCols+10, numRows+10, 10); }
+    if(pressed[110]) { rect(5*numCols-5, 2*numRows-5, numCols+10, numRows+10, 10); }
+    if(pressed[109]) { rect(6*numCols-5, 2*numRows-5, numCols+10, numRows+10, 10); }
+    if(pressed[44]) { rect(7*numCols-5, 2*numRows-5, numCols+10, numRows+10, 10); }
 }
 
 void keyReleased() {
