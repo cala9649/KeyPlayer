@@ -1,16 +1,13 @@
 // Click on the image to give it focus,
 // and then press any key.
 
-int r = 0;
-int g = 0;
-int b = 0;
-int w = 0;
-int h = 0;
-int keyVal = 0;
+int r, g, b; //colors 
+int w = 0; //width
+int h = 0; //height
+int keyVal = 0; 
 int numRows = 0;
 int numCols = 0;
-boolean[] pressed = new boolean[256];
-boolean white = true;
+boolean[] pressed = new boolean[256]; //keeps track of keys currently pressed
 
 void setup() {
   w = displayWidth;
@@ -19,7 +16,7 @@ void setup() {
   if (frame != null) {
     frame.setResizable(true);
   }
-  numRows = h/4;
+  numRows = h/4; 
   numCols = w/12;
 }
 
@@ -40,7 +37,8 @@ void keyPressed() {
     r = int(random(keyVal));
     g = int(random(keyVal));
     b = int(random(keyVal));
-    print(int(key) + " ");    
+    print(int(key) + " ");   
+    
     //do drawing and changes in here
 
     for(int x = 0; x <= w; x += numCols) {
@@ -51,15 +49,8 @@ void keyPressed() {
         rect(x, y, numCols, numRows); 
       }   
     }
- 
-    if(white) {
-      fill(255);
-      white = false;
-    }
-    else if(!white) {
-      fill(10);
-      white = true;
-    }
+
+    fill(0);
     
     if(pressed[49]) { rect(0,0, numCols+10, numRows+10, 10); }
     if(pressed[50]) { rect(numCols-5, 0, numCols+10, numRows+10, 10); }
@@ -114,6 +105,7 @@ void keyPressed() {
 void keyReleased() {
   if(int(key) == 65535) { key = 255; }
   pressed[key] = false;
+  
      for(int x = 0; x <= w; x += numCols) {
       for (int y = 0; y <= h; y += numRows) {
         if(keyVal >= 200) { fill(random(r),g,b); }
@@ -121,7 +113,8 @@ void keyReleased() {
         else { fill(r,g,random(b)); }
         rect(x, y, numCols, numRows); 
       }   
-    } 
+    }
+    
 }
 
 void draw() {
