@@ -21,6 +21,7 @@ void setup() {
 }
 
 void keyPressed() {
+   
    if(int(key) == 65535) { key = 255; }
    pressed[key] = true;
    
@@ -28,7 +29,7 @@ void keyPressed() {
       keyVal = key + 120;
     }
     else if(int(key) < 100) {
-      keyVal = key + 50;
+      keyVal = key + 100;
     }
     else {
       keyVal = 255;
@@ -45,9 +46,9 @@ void keyPressed() {
 
     for(int x = 0; x <= w; x += numCols) {
       for (int y = 0; y <= h; y += numRows) {
-        if(keyVal >= 200) { fill(random(r),g,b); }
-        else if(keyVal > 100 && keyVal < 200) { fill(r, random(g), b); }
-        else { fill(r,g,b); }
+        if(keyVal >= 200) { fill(random(255),g,b); }
+        else if(keyVal > 100 && keyVal < 200) { fill(r, random(255), b); }
+        else { fill(r,g,random(255)); }
         rect(x, y, numCols, numRows); 
       }   
     }
@@ -91,21 +92,21 @@ void keyReleased() {
   
      for(int x = 0; x <= w; x += numCols) {
       for (int y = 0; y <= h; y += numRows) {
-        if(keyVal >= 200) { fill(random(r),g,b); }
-        else if(keyVal > 100 && keyVal < 200) { fill(r, random(g), b); }
-        else { fill(r,g,random(b)); }
+        if(keyVal >= 200) { fill(random(255),g,b); }
+        else if(keyVal > 100 && keyVal < 200) { fill(r, random(255), b); }
+        else { fill(r,g,random(255)); }
         rect(x, y, numCols, numRows); 
       }   
-    }
-    
+    }   
 }
 
 void draw() {
   //press space bar for rapid changing squares
   if(key == 32) {
+    
     for(int x = 0; x <= w; x += numCols) {
       for (int y = 0; y <= h; y += numRows) {
-        fill(random(r),random(g),random(b));
+        fill(random(r),random(150),random(b));
         rect(x, y, numCols, numRows);   
       }
     }
