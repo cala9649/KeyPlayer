@@ -378,6 +378,9 @@ public void keyPressed(){
 }
 
 public void keyReleased() {
+  /**
+    keyReleased() updates the visualizer on key release.
+  */
   if(PApplet.parseInt(key) == 65535) { key = 255; }
   pressed[key] = false;
   for(int x = 0; x <= wid; x += numCols) {
@@ -392,6 +395,9 @@ public void keyReleased() {
 }
 
 public void stop(){
+  /**
+    stop() stops key sounds on key release.
+  */
   out.close();
   minim.stop();
   super.stop();

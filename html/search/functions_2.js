@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['setup',['setup',['../classkeyplayer__gui.html#a4f51c3d761204be4bc5ba4f48e806e41',1,'keyplayer_gui']]],
-  ['stop',['stop',['../classkeyplayer__gui.html#a70e441c8e0a91ac353fc89ef9b3b98bf',1,'keyplayer_gui']]]
+  ['setup',['setup',['../classkeyplayer.html#a0b7282386790ccfe8ca8fec9ba8b7e69',1,'keyplayer']]],
+  ['stop',['stop',['../classkeyplayer.html#adae4a03190615d6f7c092f88ef61b7c5',1,'keyplayer']]]
 ];

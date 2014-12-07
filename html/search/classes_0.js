@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['keyplayer_5fgui',['keyplayer_gui',['../classkeyplayer__gui.html',1,'']]]
+  ['keyplayer',['keyplayer',['../classkeyplayer.html',1,'']]]
 ];

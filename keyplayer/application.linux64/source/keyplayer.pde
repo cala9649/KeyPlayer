@@ -358,6 +358,9 @@ void keyPressed(){
 }
 
 void keyReleased() {
+  /**
+    keyReleased() updates the visualizer on key release.
+  */
   if(int(key) == 65535) { key = 255; }
   pressed[key] = false;
   for(int x = 0; x <= wid; x += numCols) {
@@ -372,6 +375,9 @@ void keyReleased() {
 }
 
 void stop(){
+  /**
+    stop() stops key sounds on key release.
+  */
   out.close();
   minim.stop();
   super.stop();
