@@ -59,6 +59,7 @@ public void i_click1(GButton source, GEvent event) { //_CODE_:i:434379:
 } //_CODE_:i:434379:
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 public void o_click1(GButton source, GEvent event) { //_CODE_:o:570110:
   println("o - GButton >> GEvent." + event + " @ " + millis());
   o.setLocalColorScheme(GCScheme.GOLD_SCHEME);
@@ -71,6 +72,8 @@ public void p_click1(GButton source, GEvent event) { //_CODE_:p:636058:
 
 =======
 >>>>>>> GUI
+=======
+>>>>>>> GUITest
 public void a_click1(GButton source, GEvent event) { //_CODE_:a:818442:
   println("a - GButton >> GEvent." + event + " @ " + millis());
 } //_CODE_:a:818442:
@@ -104,12 +107,15 @@ public void k_click1(GButton source, GEvent event) { //_CODE_:k:856786:
 } //_CODE_:k:856786:
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 public void l_click1(GButton source, GEvent event) { //_CODE_:l:785834:
   println("l - GButton >> GEvent." + event + " @ " + millis());
 } //_CODE_:l:785834:
 
 =======
 >>>>>>> GUI
+=======
+>>>>>>> GUITest
 public void z_click1(GButton source, GEvent event) { //_CODE_:z:599300:
   println("z - GButton >> GEvent." + event + " @ " + millis());
 } //_CODE_:z:599300:
@@ -139,23 +145,32 @@ public void m_click1(GButton source, GEvent event) { //_CODE_:m:831098:
 } //_CODE_:m:831098:
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 public void display_change(GSlider2D source, GEvent event) { //_CODE_:display:748887:
   println("display - GSlider2D >> GEvent." + event + " @ " + millis());
 } //_CODE_:display:748887:
 
 =======
 >>>>>>> GUI
+=======
+>>>>>>> GUITest
 public void dropList1_click1(GDropList source, GEvent event) { //_CODE_:dropList1:952302:
   println("dropList1 - GDropList >> GEvent." + event + " @ " + millis());
 } //_CODE_:dropList1:952302:
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> GUITest
 public void comma_click1(GButton source, GEvent event) { //_CODE_:comma:386131:
   println("button1 - GButton >> GEvent." + event + " @ " + millis());
 } //_CODE_:comma:386131:
 
+<<<<<<< HEAD
 >>>>>>> GUI
+=======
+>>>>>>> GUITest
 
 
 // Create all the GUI controls. 
@@ -166,6 +181,7 @@ public void createGUI(){
   G4P.setCursor(ARROW);
   if(frame != null)
     frame.setTitle("Sketch Window");
+<<<<<<< HEAD
 <<<<<<< HEAD
   q = new GButton(this, 50, 630, 30, 30);
   q.setText("Q");
@@ -185,6 +201,8 @@ public void createGUI(){
   r.addEventHandler(this, "r_click1");
   slider1 = new GSlider(this, 785, 625, 100, 20, 10.0);
 =======
+=======
+>>>>>>> GUITest
   q = new GButton(this, 50, height - 190, 30, 30);
   q.setText("Q");
   q.setTextBold();
@@ -202,7 +220,10 @@ public void createGUI(){
   r.setTextBold();
   r.addEventHandler(this, "r_click1");
   slider1 = new GSlider(this, width - 100, height - 200, 100, 20, 10.0);
+<<<<<<< HEAD
 >>>>>>> GUI
+=======
+>>>>>>> GUITest
   slider1.setRotation(PI/2, GControlMode.CORNER);
   slider1.setLimits(0.5, 0.0, 1.0);
   slider1.setNumberFormat(G4P.DECIMAL, 2);
@@ -210,14 +231,19 @@ public void createGUI(){
   slider1.setOpaque(false);
   slider1.addEventHandler(this, "slider1_change1");
 <<<<<<< HEAD
+<<<<<<< HEAD
   VolumeLabel = new GLabel(this, 749, 725, 50, 20);
 =======
   VolumeLabel = new GLabel(this, width - 135, height - 100, 50, 20);
 >>>>>>> GUI
+=======
+  VolumeLabel = new GLabel(this, width - 135, height - 100, 50, 20);
+>>>>>>> GUITest
   VolumeLabel.setText("Volume");
   VolumeLabel.setTextBold();
   VolumeLabel.setLocalColorScheme(GCScheme.BLUE_SCHEME);
   VolumeLabel.setOpaque(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
   t = new GButton(this, 190, 630, 30, 30);
   t.setText("T");
@@ -315,6 +341,8 @@ public void createGUI(){
   display.setOpaque(true);
   display.addEventHandler(this, "display_change");
 =======
+=======
+>>>>>>> GUITest
   t = new GButton(this, 190, height - 190, 30, 30);
   t.setText("T");
   t.setTextBold();
@@ -391,28 +419,41 @@ public void createGUI(){
   m.setText("M");
   m.setTextBold();
   m.addEventHandler(this, "m_click1");
+<<<<<<< HEAD
 >>>>>>> GUI
+=======
+>>>>>>> GUITest
   togGroup1 = new GToggleGroup();
   dropList1 = new GDropList(this, 0, 0, 150, 80, 3);
   dropList1.setItems(loadStrings("list_952302"), 0);
   dropList1.setLocalColorScheme(GCScheme.PURPLE_SCHEME);
   dropList1.addEventHandler(this, "dropList1_click1");
 <<<<<<< HEAD
+<<<<<<< HEAD
   label1 = new GLabel(this, 500, 630, 80, 20);
 =======
   label1 = new GLabel(this, width/2, height - 190, 80, 20);
 >>>>>>> GUI
+=======
+  label1 = new GLabel(this, width/2, height - 190, 80, 20);
+>>>>>>> GUITest
   label1.setText("Record");
   label1.setTextBold();
   label1.setLocalColorScheme(GCScheme.BLUE_SCHEME);
   label1.setOpaque(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> GUITest
   comma = new GButton(this, 320, height - 120, 30, 30);
   comma.setText("<");
   comma.setTextBold();
   comma.addEventHandler(this, "comma_click1");
+<<<<<<< HEAD
 >>>>>>> GUI
+=======
+>>>>>>> GUITest
 }
 
 // Variable declarations 
@@ -428,10 +469,13 @@ GButton y;
 GButton u; 
 GButton i; 
 <<<<<<< HEAD
+<<<<<<< HEAD
 GButton o; 
 GButton p; 
 =======
 >>>>>>> GUI
+=======
+>>>>>>> GUITest
 GButton a; 
 GButton s; 
 GButton d; 
@@ -441,9 +485,12 @@ GButton h;
 GButton j; 
 GButton k; 
 <<<<<<< HEAD
+<<<<<<< HEAD
 GButton l; 
 =======
 >>>>>>> GUI
+=======
+>>>>>>> GUITest
 GButton z; 
 GButton x; 
 GButton c; 
@@ -452,14 +499,20 @@ GButton b;
 GButton n; 
 GButton m; 
 <<<<<<< HEAD
+<<<<<<< HEAD
 GSlider2D display; 
 GToggleGroup togGroup1; 
 GDropList dropList1; 
 GLabel label1; 
 =======
+=======
+>>>>>>> GUITest
 GToggleGroup togGroup1; 
 GDropList dropList1; 
 GLabel label1; 
 GButton comma; 
+<<<<<<< HEAD
 >>>>>>> GUI
+=======
+>>>>>>> GUITest
 

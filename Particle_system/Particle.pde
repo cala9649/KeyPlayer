@@ -81,7 +81,7 @@ class Particle {
     stroke(0, life);
     //fill(175,life);
     fill(col1, col2, col3);
-    rect(x, y, 10, 10);
+    ellipse(x, y, life/3, life/3);
   }
 }
 
