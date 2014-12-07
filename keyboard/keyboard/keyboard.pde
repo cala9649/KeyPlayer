@@ -2,6 +2,10 @@
 
 import ddf.minim.*;
 import ddf.minim.signals.*;
+<<<<<<< HEAD
+=======
+AudioPlayer player;
+>>>>>>> GUI
 
 Minim        minim;
 AudioOutput  out;
@@ -21,6 +25,14 @@ void draw(){
 }
 
 void keyPressed(){
+<<<<<<< HEAD
+=======
+  if (keyCode == 32){
+    player = minim.loadFile("heyheyhey.wav");
+    player.play();
+  }
+      
+>>>>>>> GUI
   switch (key){
    case '1':
       triangle = new TriangleWave(130.81, 0.05, out.sampleRate());
