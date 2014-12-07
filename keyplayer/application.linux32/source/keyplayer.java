@@ -18,6 +18,14 @@ import java.io.IOException;
 
 public class keyplayer extends PApplet {
 
+/*!
+  KeyPlayer
+  @author Michael Bostwick, Carlos Lawrence, Josh Rinaldi, and Jake Traut
+  @version 12/07/2014
+  @modified 12/07/2014
+  */
+
+
 // Need G4P library
 
 
@@ -166,22 +174,22 @@ public void keyPressed(){
     keyIndex = 27;
   }
   
-  if(PApplet.parseInt(key) == 49) {
+  if(PApplet.parseInt(key) == 49) { //!press 1 to load heyheyhey.wav
     player.pause(); 
     songFile = "heyheyhey.wav";
   }
-  if(PApplet.parseInt(key) == 50) {
+  if(PApplet.parseInt(key) == 50) { //!press 2 to load Scary Monsters and Nice Sprites.mp3
     player.pause();
     songFile = "SKRILLEX - Scary Monsters And Nice Sprites.mp3";
   }
-  if(PApplet.parseInt(key) == 51) {
+  if(PApplet.parseInt(key) == 51) { //!press 3 to load Chip on Your Shoulder.mp3
     player.pause();
     songFile = "8 Bit Weapon - Chip On Your Shoulder.mp3";
   }
-  if(PApplet.parseInt(key) == 52) {
+  if(PApplet.parseInt(key) == 52) { //!press 4 to load Closer.mp3
     player.pause();
     songFile =  "8 Bit Weapon - Closer (Bitpop Mix).mp3";
-  }
+  } //! then press spacebar to play the song\!
 
   
    if(PApplet.parseInt(key) == 65535) { key = 255; }
@@ -243,122 +251,122 @@ public void keyPressed(){
   
   switch(keyIndex) {
     case 0: a_click1((a), GEvent.CLICKED); 
-      triangle = new TriangleWave(523.25f, 0.05f, out.sampleRate());
+      triangle = new TriangleWave(523.25f, 0.75f, out.sampleRate());
       out.addSignal(triangle);
       triangle.portamento(30);
       break;
     case 1: b_click1((b), GEvent.CLICKED); 
-      triangle = new TriangleWave(1567.98f, 0.05f, out.sampleRate());
+      triangle = new TriangleWave(1567.98f, 0.75f, out.sampleRate());
       out.addSignal(triangle);
       triangle.portamento(30);
       break;
     case 2: c_click1((c), GEvent.CLICKED); 
-      triangle = new TriangleWave(1318.51f, 0.05f, out.sampleRate());
+      triangle = new TriangleWave(1318.51f, 0.75f, out.sampleRate());
       out.addSignal(triangle);
       triangle.portamento(30);
       break;
     case 3: d_click1((d), GEvent.CLICKED); 
-      triangle = new TriangleWave(659.25f, 0.05f, out.sampleRate());
+      triangle = new TriangleWave(659.25f, 0.75f, out.sampleRate());
       out.addSignal(triangle);
       triangle.portamento(30);
       break;
     case 4: e_click1((e), GEvent.CLICKED); 
-      triangle = new TriangleWave(329.63f, 0.05f, out.sampleRate());
+      triangle = new TriangleWave(329.63f, 0.75f, out.sampleRate());
       out.addSignal(triangle);
       triangle.portamento(30);
       break;
     case 5: f_click1((f), GEvent.CLICKED); 
-      triangle = new TriangleWave(698.46f, 0.05f, out.sampleRate());
+      triangle = new TriangleWave(698.46f, 0.75f, out.sampleRate());
       out.addSignal(triangle);
       triangle.portamento(30);
       break;
     case 6: g_click1((g), GEvent.CLICKED); 
-      triangle = new TriangleWave(783.99f, 0.05f, out.sampleRate());
+      triangle = new TriangleWave(783.99f, 0.75f, out.sampleRate());
       out.addSignal(triangle);
       triangle.portamento(30);
       break;
     case 7: h_click1((h), GEvent.CLICKED); 
-      triangle = new TriangleWave(880, 0.05f, out.sampleRate());
+      triangle = new TriangleWave(880, 0.75f, out.sampleRate());
       out.addSignal(triangle);
       triangle.portamento(30);
       break;
     case 8: i_click1((i), GEvent.CLICKED); 
-      triangle = new TriangleWave(523.25f, 0.05f, out.sampleRate());
+      triangle = new TriangleWave(523.25f, 0.75f, out.sampleRate());
       out.addSignal(triangle);
       triangle.portamento(30);
       break;
     case 9: j_click1((j), GEvent.CLICKED); 
-      triangle = new TriangleWave(987.77f, 0.05f, out.sampleRate());
+      triangle = new TriangleWave(987.77f, 0.75f, out.sampleRate());
       out.addSignal(triangle);
       triangle.portamento(30);
       break;
     case 10: k_click1((k), GEvent.CLICKED); 
-      triangle = new TriangleWave(1046.5f, 0.05f, out.sampleRate());
+      triangle = new TriangleWave(1046.5f, 0.75f, out.sampleRate());
       out.addSignal(triangle);
       triangle.portamento(30);
       break;
     case 12: m_click1((m), GEvent.CLICKED); 
-      triangle = new TriangleWave(1975.53f, 0.05f, out.sampleRate());
+      triangle = new TriangleWave(1975.53f, 0.75f, out.sampleRate());
       out.addSignal(triangle);
       triangle.portamento(30);
       break;
     case 13: n_click1((n), GEvent.CLICKED); 
-      triangle = new TriangleWave(1760, 0.05f, out.sampleRate());
+      triangle = new TriangleWave(1760, 0.75f, out.sampleRate());
       out.addSignal(triangle);
       triangle.portamento(30);
       break;
     case 16: q_click1((q), GEvent.CLICKED); 
-      triangle = new TriangleWave(261.63f, 0.05f, out.sampleRate());
+      triangle = new TriangleWave(261.63f, 0.75f, out.sampleRate());
       out.addSignal(triangle);
       triangle.portamento(30);
       break;
     case 17: r_click1((r), GEvent.CLICKED); 
-      triangle = new TriangleWave(349.23f, 0.05f, out.sampleRate());
+      triangle = new TriangleWave(349.23f, 0.75f, out.sampleRate());
       out.addSignal(triangle);
       triangle.portamento(30);
       break;
     case 18: s_click1((s), GEvent.CLICKED); 
-      triangle = new TriangleWave(587.33f, 0.05f, out.sampleRate());
+      triangle = new TriangleWave(587.33f, 0.75f, out.sampleRate());
       out.addSignal(triangle);
       triangle.portamento(30);
       break;
     case 19: t_click1((t), GEvent.CLICKED); 
-      triangle = new TriangleWave(392, 0.05f, out.sampleRate());
+      triangle = new TriangleWave(392, 0.75f, out.sampleRate());
       out.addSignal(triangle);
       triangle.portamento(30);
       break;
     case 20: u_click1((u), GEvent.CLICKED); 
-      triangle = new TriangleWave(493.88f, 0.05f, out.sampleRate());
+      triangle = new TriangleWave(493.88f, 0.75f, out.sampleRate());
       out.addSignal(triangle);
       triangle.portamento(30);
       break;
     case 21: v_click1((v), GEvent.CLICKED); 
-      triangle = new TriangleWave(1396.91f, 0.05f, out.sampleRate());
+      triangle = new TriangleWave(1396.91f, 0.75f, out.sampleRate());
       out.addSignal(triangle);
       triangle.portamento(30);
       break;
     case 22: w_click1((w), GEvent.CLICKED); 
-      triangle = new TriangleWave(293.66f, 0.05f, out.sampleRate());
+      triangle = new TriangleWave(293.66f, 0.75f, out.sampleRate());
       out.addSignal(triangle);
       triangle.portamento(30);
       break;
     case 23: x_click1((x), GEvent.CLICKED); 
-      triangle = new TriangleWave(1174.66f, 0.05f, out.sampleRate());
+      triangle = new TriangleWave(1174.66f, 0.75f, out.sampleRate());
       out.addSignal(triangle);
       triangle.portamento(30);
       break;
     case 24: y_click1((y), GEvent.CLICKED); 
-      triangle = new TriangleWave(440, 0.05f, out.sampleRate());
+      triangle = new TriangleWave(440, 0.75f, out.sampleRate());
       out.addSignal(triangle);
       triangle.portamento(30);
       break;
     case 25: z_click1((z), GEvent.CLICKED); 
-      triangle = new TriangleWave(1046.5f, 0.05f, out.sampleRate());
+      triangle = new TriangleWave(1046.5f, 0.75f, out.sampleRate());
       out.addSignal(triangle);
       triangle.portamento(30);
       break;
     case 26: comma_click1((comma), GEvent.CLICKED); 
-      triangle = new TriangleWave(2093, 0.05f, out.sampleRate());
+      triangle = new TriangleWave(2093, 0.75f, out.sampleRate());
       out.addSignal(triangle);
       triangle.portamento(30);
       break;
