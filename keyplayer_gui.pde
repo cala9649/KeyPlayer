@@ -330,6 +330,9 @@ void keyPressed(){
 }
 
 void keyReleased() {
+  /**
+    keyReleased() is used to recreate the colors on the screen.
+  */
   if(int(key) == 65535) { key = 255; }
   pressed[key] = false;
   for(int x = 0; x <= wid; x += numCols) {
@@ -344,6 +347,9 @@ void keyReleased() {
 }
 
 void stop(){
+  /**
+    stop() stops the sounds when the key is released.
+  */
   out.close();
   minim.stop();
   super.stop();

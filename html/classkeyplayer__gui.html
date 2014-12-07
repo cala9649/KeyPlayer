@@ -61,6 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -68,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -98,18 +99,16 @@ Inheritance diagram for keyplayer_gui:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4f51c3d761204be4bc5ba4f48e806e41"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f51c3d761204be4bc5ba4f48e806e41"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setup</b> ()</td></tr>
+<tr class="memitem:a4f51c3d761204be4bc5ba4f48e806e41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkeyplayer__gui.html#a4f51c3d761204be4bc5ba4f48e806e41">setup</a> ()</td></tr>
 <tr class="separator:a4f51c3d761204be4bc5ba4f48e806e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae66ace1d0588e8896343b325869eb470"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae66ace1d0588e8896343b325869eb470"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> ()</td></tr>
+<tr class="memitem:ae66ace1d0588e8896343b325869eb470"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkeyplayer__gui.html#ae66ace1d0588e8896343b325869eb470">draw</a> ()</td></tr>
 <tr class="separator:ae66ace1d0588e8896343b325869eb470"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11a22f0316258cecae2fd0cca0ffb066"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11a22f0316258cecae2fd0cca0ffb066"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>keyPressed</b> ()</td></tr>
+<tr class="memitem:a11a22f0316258cecae2fd0cca0ffb066"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkeyplayer__gui.html#a11a22f0316258cecae2fd0cca0ffb066">keyPressed</a> ()</td></tr>
 <tr class="separator:a11a22f0316258cecae2fd0cca0ffb066"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c150bd38043603ea0fb728e613f280d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c150bd38043603ea0fb728e613f280d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>keyReleased</b> ()</td></tr>
+<tr class="memitem:a4c150bd38043603ea0fb728e613f280d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkeyplayer__gui.html#a4c150bd38043603ea0fb728e613f280d">keyReleased</a> ()</td></tr>
 <tr class="separator:a4c150bd38043603ea0fb728e613f280d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70e441c8e0a91ac353fc89ef9b3b98bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkeyplayer__gui.html#a70e441c8e0a91ac353fc89ef9b3b98bf">stop</a> ()</td></tr>
+<tr class="separator:a70e441c8e0a91ac353fc89ef9b3b98bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2aa16036156f3c1162cbb5ed914b6d0e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2aa16036156f3c1162cbb5ed914b6d0e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>customGUI</b> ()</td></tr>
 <tr class="separator:a2aa16036156f3c1162cbb5ed914b6d0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -201,13 +200,94 @@ Static Public Member Functions</h2></td></tr>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (String[] passedArgs)</td></tr>
 <tr class="separator:a2a38a02437acd9c3033e262e87bf8c29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ae66ace1d0588e8896343b325869eb470"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void keyplayer_gui.draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="classkeyplayer__gui.html#ae66ace1d0588e8896343b325869eb470">draw()</a> adds visual elements to the GUI.</p>
+
+</div>
+</div>
+<a class="anchor" id="a11a22f0316258cecae2fd0cca0ffb066"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void keyplayer_gui.keyPressed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="classkeyplayer__gui.html#a11a22f0316258cecae2fd0cca0ffb066">keyPressed()</a> is the main function of the program. It parses keyboard input and displays the visual effects for each key and plays the correct note.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4c150bd38043603ea0fb728e613f280d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void keyplayer_gui.keyReleased </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="classkeyplayer__gui.html#a4c150bd38043603ea0fb728e613f280d">keyReleased()</a> is used to recreate the colors on the screen.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4f51c3d761204be4bc5ba4f48e806e41"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void keyplayer_gui.setup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="classkeyplayer__gui.html#a4f51c3d761204be4bc5ba4f48e806e41">setup()</a> builds the initial frame for the program by opening in fullscreen mode and initiating the GUI.</p>
+
+</div>
+</div>
+<a class="anchor" id="a70e441c8e0a91ac353fc89ef9b3b98bf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void keyplayer_gui.stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="classkeyplayer__gui.html#a70e441c8e0a91ac353fc89ef9b3b98bf">stop()</a> stops the sounds when the key is released.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>application.linux64/source/keyplayer_gui.java</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Dec 6 2014 16:06:14 for KeyPlayer by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 7 2014 12:38:47 for KeyPlayer by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
